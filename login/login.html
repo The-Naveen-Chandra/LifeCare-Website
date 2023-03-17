@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>complete responsive hospital website design</title>
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function myFunction() {
+      function validate() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username == "admin" && password == "admin") {
+          alert("Login successfully");
+          window.location = "home.html"; // Redirecting to other page.
+          return false;
+        } else {
+          alert("Wrong username or password");
+        }
+      }
+      location.replace("http://127.0.0.1:5500/index.html")
+    }
+  </script>
+</head>
+
+<body>
+
+  <header class="header">
+    <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> LifeCare. </a>
+  </header>
+
+
+  <div class="center">
+    <h1>Login</h1>
+    <form method="post">
+      <div class="txt_field">
+        <input type="text" required>
+        <span></span>
+        <label>Username</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" required>
+        <span></span>
+        <label>Password</label>
+      </div>
+      <div class="pass">Forgot Password?</div>
+
+      <input type="submit" value="Login" onclick="myFunction()">
+
+      <div class="signup_link">
+        Not a member? <a href="#">Signup</a>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
